@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>FocusOnXYZ</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+
+<!-- css files -->
+        <link rel="stylesheet" href="css_animationStyle_v0.css">  
+        <link rel="stylesheet" href="css_mainStyler.css">
+        <link rel="stylesheet" href="css_frameStyle_apanel.css">  
+        <link rel="stylesheet" href="css_foxyzRTE_Styler_m1.css">  
+    <!--<link rel="stylesheet" href="css/modal.css">  -->
+      
+        <link rel="stylesheet" href="css_w3.css">     
+        
+<!--<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Playfair+Display" /> *-->
+<!--        <link rel="manifest" href="/manifest.webmanifest">-->
+        
+
+<!-- External Links -->
+        <!-- NOTE: Add integrity="sha384-..." for qrcode.min.js once CDN hash is verified -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" crossorigin="anonymous"></script>
+
+
+<!-- AIAgency: Production sign token injection (D088/D090) -->
+<!-- On production, PHP injects the sign token before connector.js loads.
+     On localhost, this block is skipped — ephemeral test key is used. -->
+<!--
+<?php if (!in_array($_SERVER['HTTP_HOST'] ?? '', ['localhost', '127.0.0.1'])): ?>
+<script>
+  window._aiagencySignToken = '<?php echo htmlspecialchars(getenv("AIAGENCY_SIGN_TOKEN") ?: "", ENT_QUOTES); ?>';
+</script>
+<?php endif; ?>
+-->
+
+<!-- AIAgency runtime loader
+     SRI hash must be regenerated after any connector.js change.
+     Run: bash aiagency/tools/generate_sri.sh
+     Last regenerated: 2026-04-17 (MOUNT_REFACTOR_P1 — 4 components + portal_shell v1.0.14) -->
+<script
+    src="aiagency/connector.js"
+    integrity="sha384-7v929LKH3vQYQ79HKFlppSVFTwVCRV3XkObqRxr0SnB4kSD7UdeeVbyGyEtG6umz"
+    crossorigin="anonymous"></script>
+
+<!-- Internal Links -->
+        <script src="rte_Editor_940.js" ></script> 
+        <script src="performGraph.js" defer></script>  
+        
+<!-- Properties -->
+        <script src="property_references.js" defer></script>        
+        <script src="property_status.js" defer></script>         
+
+        <script src="property_title.js" defer></script>
+        <script src="property_description.js" defer></script>
+        <script src="property_priority.js" defer></script>
+        <script src="property_datetime.js" defer></script>
+        <script src="property_category.js" defer></script> 
+        <script src="property_contacts.js" defer></script>    
+        <script src="property_locations.js" defer></script>
+        <script src="property_comments.js" defer></script>     
+              
+
+<!-- control files -->
+        <script src="control_cssHandler.js" ></script>
+        <script src="control_eventsHandler.js" ></script>
+        <script src="control_eventConfig.js" ></script>                 
+        <script src="control_frmEditor.js" ></script>
+        <script src="control_frmDisplayer.js" ></script>
+        <script src="control_frmReporter.js" ></script>
+        
+        <script src="control_loadStore.js" ></script>        
+        <script src="control_updateStore.js" ></script>
+        <script src="control_pageReloader.js" ></script>          
+        <script src="control_coverPage.js" ></script>  
+        <script src="control_panelExtra.js" defer></script>     
+        
+        <script src="control_pageConfig.js" defer></script>
+                
+<!-- support Files -->         
+        <script src="auxiliar.js" ></script>         
+    </head>
+    <body onload="openPage();">
+        <div id="pageContainer" class="pageContainer">
+            <div id="headContainer" class="headContainer">
+                <div id="desktop_Header" class="desktopHeader  closedDisplay">
+                    <!-- <span id="desktop_MenuSelector" class="dMenuSelector closedDisplay"  onclick="toggleMenu()">&#9776;</span> -->
+                    <span id="desktop_headTitle" class="dtitleInfo pTitle pTitle-fw" onclick="openFrontCover('true')">FocusOnXYZ</span> 
+                    <span id="desktop_loadRequest" class="badge_test_size  badge_text_size reloadNotice closedDisplay"  >N</span>
+                    <span id="desktop_userTitle" class="duserInfo" ></span>  
+                </div>
+                <div id="mobile_Header" class="mobileHeader closedDisplay">
+                    <div class="mheadBody_1">
+                        <span id="mobile_headTitle" class="mtitleInfo pTitle pTitle-fw" onclick="openPage()">FocusOnXYZ</span>   
+                        <span id="mobile_userTitle" class="muserInfo" ></span>                          
+                    </div>
+
+                    <div class="mheadBody_2">
+                        <span id="mobile_loadRequest" class="badge_test_size  badge_text_size reloadNotice closedDisplay" >N</span>
+                        <span id="mobile_MenuSelector" class="mMenuSelector closedDisplay"  onclick="toggleMenu()">&#9776;</span>                         
+                    </div>
+                </div> 
+                <div id="tablet_Header" class="tabletHeader closedDisplay">
+    <div class="tablet-header-left">
+        <span id="tablet_headTitle" class="ttitleInfo pTitle pTitle-fw" onclick="openPage()">FocusOnXYZ</span>
+        <span id="tablet_userTitle" class="tuserInfo"></span>
+    </div>
+
+    <div class="tablet-header-right">
+        <span id="tablet_loadRequest" class="badge_test_size badge_text_size reloadNotice closedDisplay">N</span>
+        
+        <span id="tablet_BodySlider_1" class="bodySlider openDisplay">&#8656;</span>
+        <span id="tablet_BodySlider_2" class="bodySlider closedDisplay">&#8658;</span>
+        <span id="tablet_BodySlider_3" class="bodySlider openDisplay">&#8660;</span>
+        <span id="tablet_BodySlider_4" class="bodySlider closedDisplay">&#8656;</span>
+        <span id="tablet_BodySlider_5" class="bodySlider closedDisplay">&#8658;</span>
+    </div>
+</div>
+            </div>
+            <div id="menuContainer"  class="menuContainer">
+                <div class="menuBoard"></div>
+            </div>
+            <div id="mainContainer"  class="mainContainer" data-block-index="1">
+                <!-- AIAgency entry point — Phase 11a -->
+<div id="aiagency_entry_point">
+  <button id="aiagency_launcher" data-aiagency-caller data-expanded="false">AIAgency</button>
+  <div id="aiagency_portal" class="aiagency__hidden"></div>
+</div>
+                <div id="dataBoard" class="closedDisplay">
+                        <div id="dimensions">
+                            <input type="hidden" id="dimension_Links"  value="">
+                        </div>
+                        <div id="idSelection">
+                            <input type="hidden" id="IDSelection_title" value="">       <!-- saves the selected sub/properties in the report -->                     
+                            <input type="hidden" id="IDSelection_cnter" value="">       <!-- saves the selected id -->                     
+                            <input type="hidden" id="IDSelection_all" value="">         <!-- saves all id created by user --> 
+                        </div>
+                        <div id="specificData">
+                            <input type="hidden" id="newestDateTime" value="">     
+                            <input type="hidden" id="menuControl" value="">
+                        </div>                
+                    </div>
+                <div id="coverBoard" class="coverBoard openDisplay">
+                    <div id="3FPerformance" class="performer"></div>
+                    <div id="3FPiramide"    class="piramide">
+                        <!--    <img id="piramide" alt="This is a Hierarchy Piramide for 3Focus" src="images/PerformancePiramide.jpg">  -->
+                    </div>
+                </div>
+                <div id="actionBoard" class="closedDisplay" data-block-index="2"></div> 
+                <div id="userConfiguratioBoard" class="closedDisplay">
+                    <h1>User Configuration Board</h1>
+                    <details>
+                        <summary>Manage Application Appearance</summary>
+                        <div id="ucb_app_appearance" class="uconfigboard" ></div>
+                    </details>
+                    
+                    <details>
+                        <summary>Manage Actions/Tasks</summary>
+                        <div id="ucb_actions" class="uconfigboard" ></div>
+                    </details>
+                    
+                    <details>
+                        <summary>Manage User AI Models</summary>
+                        <div id="ucb_ai_models" class="uconfigboard" ></div>
+                    </details>
+                    
+                    <details>
+                        <summary>Manage User Database</summary>
+                        <div id="ucb_database" class="uconfigboard" >
+                        </div>
+                    </details>
+                    
+                    <details>
+                        <summary>Manage User Information</summary>
+                        <div id="ucb_personalinfo" class="uconfigboard" >
+                        </div>
+                    </details>
+                    <button id="ucb_exit">Exit Configuration</button>
+                </div> 
+            </div>
+            <div id="extraContainer" class="extraContainer">
+                <div id="pageRighter" class="pageExtra"></div>
+            </div>
+            <div id="footContainer"  class="footContainer pageFooterRetracted">
+                <div id="footDisplayON" class="footdisplayON">
+                    <div id="footDisplay" class="footDisplayer closedDisplay" onclick="footHandler()">&#x25b6;</div>                    
+                    <div id="Motivator"   class="footMotivator"></div>
+                </div>
+                <div id="footBoard"   class="footBoard closedDisplay">
+                    <div id="extraBoard"  class="extraboard"><br></div>
+                </div> 
+            </div>
+        </div>
+        <dialog id="modal3f_box" class="modalBox">
+            <header id="headModal3f">           
+                <span id="head_modal3f_Content1" onclick="closeModal()" class="mhead1">x</span>
+                <div  id="head_modal3f_Content2" class="mhead2"></div>
+            </header> 
+            <div  id="bodyModal3f" class="body_modal3f">
+                <a id="bodyModalLinker" href="" >
+                    <img id="body_modal3f_Content1" class="mbody1">
+                    <div id="body_modal3f_Content2" class="mbody2"></div>
+                </a>
+            </div>
+            <footer  id="footModal3f">
+                <span id="foot_modal3f_Content1" class="mfoot1"></span>
+                <div  id="foot_modal3f_Content2" class="mfoot2"></div>
+            </footer>
+        </dialog>
+<!-- 
+        ---[ Phase B Web Component Portal ]---
+        <aiagency-portal
+          tenant="ten_test"
+          theme="auto"
+          mode="full"
+          storage="indexeddb">
+        </aiagency-portal>
+-->   
+        <script>var ptimer1 = performance.now();</script>
+<!-- AIAgency portal init fallback (safety net — primary init is in connector.js) -->
+<script>
+(function () {
+  function _initPortal() {
+    if (window.AIAgency && window.AIAgency.portal &&
+        typeof window.AIAgency.portal.init === 'function' &&
+        !window.AIAgency.portal._initialised) {
+      AIAgency.portal.init('#aiagency_portal', { theme: 'dark', tenant: 'ten_0001' });
+    }
+  }
+  if (window.AIAgency && window.AIAgency.connector &&
+      window.AIAgency.connector.status === 'READY') {
+    _initPortal();
+  } else {
+    document.addEventListener('aiagency.ready', _initPortal, { once: true });
+  }
+}());
+</script>
+    </body>
+
+</html> 
+
+
+
+
