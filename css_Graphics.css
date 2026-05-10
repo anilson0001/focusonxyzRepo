@@ -1,0 +1,58 @@
+
+:root	
+{
+	--dashPercentage: 0;
+	--offsetPercentage: 0;
+}
+
+.container {  padding:15px;   border: 1px solid red; }
+
+
+.svgCircle
+{
+	fill:none;
+
+	stroke: green;
+	stroke-width:5px;
+	stroke-dasharray:var(--dashPercentage);
+	stroke-dashoffset:var(--offsetPercentage);
+
+	display:flex;
+    
+	position: absolute;
+	top:0;
+	left:0;
+  
+    align-items:center;
+    justify-content:center;
+}
+
+
+.circleText	
+{
+    fill:black;
+    font-size:12px;
+    font-family:sans-serif;
+    font-weight:bold;
+}
+    
+.headCircleText	
+{
+    fill:black;
+    font-size:12px;
+    font-family:sans-serif;
+    font-weight:bold;
+}
+
+.footCircleText	
+{
+    fill:black;
+    font-size:12px;
+    font-family:sans-serif;
+    font-weight:bold;
+}
+  
+
+
+.circle
+{	position:relative;  }

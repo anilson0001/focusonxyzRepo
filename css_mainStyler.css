@@ -1,0 +1,76 @@
+@import "css_mobileStyle.css" only screen and (max-width:560px);
+@import "css_tabletStyle.css" only screen and (min-width:561px) and (max-width:1100px);
+@import "css_desktopStyle.css" only screen and (min-width:1101px);
+@import "css_Graphics.css";
+:root
+{
+        --lf_border_color: #204060;
+        --rt_border_color: #204060;
+        --side_border_color: #204060;
+        --menu_postitle: white;  
+        --border-left-width: 2px;
+        --this_color: #204060;
+        --actionArrow_color: #204060;
+        --actionArrow_border_color: #204060;
+        --bgColorDefault: #204060;
+        --badgePosition: absolute;
+        --menu_slideDown:0;
+        --menuSelectedColor:#9bc5ae;
+        --menuUncolor:#ffffff;
+        
+        --menuHeight:60px;
+        
+        --footHeight:100%;
+        --bodyHeight:100%;
+        --headfootModalColor: #576675;
+        
+        
+        --pageHeight:0px;
+        --pageBody:0px;
+        --pageFooter:0px;
+        
+        --comment_bg:#ffffff;
+}
+
+
+
+
+*   {   /*text-decoration: none; */  box-sizing: border-box; }
+.lf-blockFrame-color        {border-color: var(--lf_border_color);}
+.rt-blockFrame-color        {border-color: var(--rt_border_color);}
+
+.percentageTail {font-weight:bold;}
+body {fiel-sizing: content;}
+
+/*to be moved report.css*/
+.repoBlock      {border-left-style:solid; border-width:medium; padding-left:5px; margin:5px;}
+.repoBlock_1    {margin-bottom:15px;}
+.repoBlock_2    {padding: 7px;}
+
+.repoAnalysis   {font-family: math; font-size:14px; float:right;}
+
+
+.dragHandle { cursor: grab;  margin-left: 5px; margin-right: 5px; } 
+.dragHandler :active { cursor: grabbing; }
+.dragger        {
+    
+                }
+.catBall        {   height:10px; width:10px; display:inline-block;  background-color:#204060; color:#204060; border-style:solid; border-radius:100%; }
+
+
+/*
+    .pageContainer
+    {
+        display: grid;
+        max-height:fit-content;
+        
+        grid-template-areas:
+        'header'  
+        'leftmenu' 
+        'main'     
+        'footer';
+        
+        position:relative;
+        width:100%; 
+    }
+*/

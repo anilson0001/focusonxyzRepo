@@ -1,0 +1,107 @@
+
+
+/* related to modal */
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+
+/* related to modal */
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+
+
+.blockHead
+{
+    /*visibility: hidden;*/
+    text-overflow: clip;
+    white-space: nowrap;
+    
+    position: relative; 
+    /*padding: 10px;*/
+    /*width:0;*/
+    
+    /* background-color: #244f75;  */
+    /*color: white; */
+    
+    animation: animateHeader 1s linear 1s forwards;
+}
+
+.blockBody	{   overflow: hidden; /*background-color: #ecf2f9;*/ height:0; transition: all 1s ease-in-out;}
+.setHeight  {   height: 25px;}    
+
+
+
+
+
+/*animate motivationalmessage */
+@keyframes firstmessage 
+{
+  5%    { background-color:var(--bgColorDefault);    }  
+  25%   { font-size:30px;    background-color: var(--bgColorDefault);  color:#ffffff; }
+  85%   { font-size:30px;    background-color: var(--bgColorDefault);  color:#ffffff;  } 
+  100%  { background-color:var(--bgColorDefault); color:#ffffff;  } 
+  /*100% {color:#204060; font-size:15px;}*/
+}
+
+
+
+/*animate motivationalmessage */
+@keyframes piramide 
+{
+  from  {   height:0; width:0;}  
+  to    {   height:100%; width:100%;}
+}
+
+/*enlarge performance*/
+@keyframes showuperformance
+{  
+        0% {font-size:6px;}
+    100% {font-size:30px;} 
+    
+}
+
+
+/*make visibility true*/
+@keyframes visibilityON
+{  
+    0% {opacity: 0;}
+    100% {opacity:1;}
+}
+
+
+@keyframes slidemenu
+{   
+    0%      {   height: 0;    }
+    100%    {   height: 60px; }
+}
+
+@keyframes left_right_slider
+{   
+    from  {  width:0; left: 0;    }
+    to    {   width: 100%; /* left: 350px; */flex:100%; min-width:200px;}
+}
+
+@keyframes right_left_slider
+{   
+    from  {  width:0; /*left: 100%;   */ }
+    to    {   width: 100%; /*left: 65%; */}
+}
+
+
+@keyframes top_down_slider
+{   
+    from  {  height:0;     }
+    /*to    {  height: 100%; }*/
+    
+        to    {  height: var(--menu_slideDown); }
+}
+
+@keyframes slideUp
+{   
+    from  {  height:0;     }
+    to    {   height: 100%; }
+}

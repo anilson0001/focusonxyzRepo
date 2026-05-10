@@ -1,0 +1,106 @@
+.modalBox {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 60px;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: #b6c0c8; /*#9E9E9E; /* rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  -webkit-animation-name: fadeIn; /* Fade in the background */
+  -webkit-animation-duration: 0.4s;
+  animation-name: fadeIn;
+  animation-duration: 0.4s
+}
+
+/* Modal Content 
+.modal-content {
+  position: fixed;
+  bottom: 0;
+  background-color: #fefefe;
+  width: 100%;
+  -webkit-animation-name: slideIn;
+  -webkit-animation-duration: 0.4s;
+  animation-name: slideIn;
+  animation-duration: 0.4s
+}
+*/
+
+
+.head_modal3f
+{
+    height:60px;   
+    background-color: #576675;
+}
+
+/* The Close Button */
+.mhead1 {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.mhead1:hover,
+.mhead1:focus {
+  color: lightblue;
+  font-size:32px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.mhead2 {
+  padding: 2px 16px;
+  color: white;
+    font-size:20px;
+}
+
+
+.body_modal3f
+{
+    
+}
+
+.mbody1 {padding: 2px; }
+.mbody2 {padding: 2px;/* 2px 16px; */}
+
+
+
+.foot_modal3f
+{
+    height:100px;
+    background-color: #576675;
+}
+.mfoot1 {
+  padding: 2px 16px;
+  font-size:20px;
+  color: white;
+}
+.mfoot2 {
+  padding: 2px 16px;
+  font-size:12px;
+  color: white;
+}
+
+/* Add Animation */
+@-webkit-keyframes slideIn {
+  from {bottom: -300px; opacity: 0} 
+  to {bottom: 0; opacity: 1}
+}
+
+@keyframes slideIn {
+  from {bottom: -300px; opacity: 0}
+  to {bottom: 0; opacity: 1}
+}
+
+@-webkit-keyframes fadeIn {
+  from {opacity: 0} 
+  to {opacity: 1}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0} 
+  to {opacity: 1}
+}

@@ -1,0 +1,28 @@
+@layer iniatilizer, header, bodyMenu, bodyCover, bodyReport, bodyFront, bodyAux, footer;
+
+@layer initalizer
+{}
+
+@layer header
+{}
+
+@layer body
+{
+    @layer bodyMenu
+    {}
+    
+    @layer bodyCover
+    {}
+    
+    @layer bodyReport
+    {}
+    
+    @layer bodyFront
+    {}
+    
+    @layer bodyAux
+    {}
+}
+
+@layer footer
+{}
